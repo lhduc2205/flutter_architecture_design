@@ -333,6 +333,8 @@ abstract class AppColors {
   /// seedArchiveGrey99
   static const Color seedArchiveGrey99 = Color(0xfffafafa);
 
+  static const Color seedArchiveGrey97 = Color(0xFFF6F6F6);
+
   /// seedArchiveGrey95
   static const Color seedArchiveGrey95 = Color(0xfff2f2f3);
 

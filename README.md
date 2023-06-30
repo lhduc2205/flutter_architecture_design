@@ -1,16 +1,20 @@
-# architecture_designed
+# Flutter Architecture Designed
 
-Learning design architecture in Flutter
+Design architecture in Flutter
 
-## Getting Started
+## Before running
 
-This project is a starting point for a Flutter application.
+Fetch dependencies run:
+```sh
+flutter pub get
+```
 
-A few resources to get you started if this is your first Flutter project:
+Generate model run:
+```sh
+flutter pub run build_runner watch --delete-conflicting-outputs
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run app
+```sh
+flutter run
+```

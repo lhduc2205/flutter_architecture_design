@@ -10,7 +10,7 @@ import 'package:logger/logger.dart';
 
 Future<void> bootstrap() async {
   FlutterError.onError = (details) {
-    sl<Logger>().e(details.exceptionAsString(), "Bootstrap error", details.stack);
+    sl<Logger>().e(details.exceptionAsString(), 'Bootstrap error', details.stack);
   };
 
   Bloc.observer = const AppBlocObserver();
@@ -20,13 +20,13 @@ Future<void> bootstrap() async {
       WidgetsFlutterBinding.ensureInitialized();
 
       if (kReleaseMode) {
-        sl<Logger>().w("App started with release mode!", "Release mode");
+        sl<Logger>().w('App started with release mode!', 'Release mode');
       }
 
-      runApp(MyApp());
+      runApp(const MyApp());
     },
     (error, stackTrace) {
-      sl<Logger>().e(error.toString(), "", stackTrace);
+      sl<Logger>().e(error.toString(), '', stackTrace);
     },
   );
 }

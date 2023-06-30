@@ -10,5 +10,5 @@ class MealProviderState with _$MealProviderState {
     required List<MealProvider> mealProviders,
   }) = _MealProviderLoadedState;
 
-  const factory MealProviderState.error() = _MealProviderErrorState;
+  const factory MealProviderState.error(Failure failure) = _MealProviderErrorState;
 }

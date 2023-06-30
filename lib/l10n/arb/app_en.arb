@@ -5,5 +5,10 @@
   "settings": "Settings",
   "languages": "Languages",
   "vietnamese": "Vietnamese",
-  "english": "English"
+  "english": "English",
+  "batteryStatus": "Battery status",
+  "status": "Status",
+  "battery": "Battery",
+  "cannotConnectTo": "Can not connect to {destination}",
+  "tryAgain": "Try again"
 }

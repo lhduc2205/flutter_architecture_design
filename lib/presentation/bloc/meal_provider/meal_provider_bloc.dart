@@ -1,6 +1,7 @@
+import 'package:architecture_designed/core/errors/failure.dart';
 import 'package:architecture_designed/core/usecase/use_case.dart';
 import 'package:architecture_designed/domain/entities/meal_provider.entity.dart';
-import 'package:architecture_designed/domain/usecases/get_meal_provider.usecase.dart';
+import 'package:architecture_designed/domain/usecases/meal_provider/get_meal_provider.usecase.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -19,18 +20,20 @@ class MealProviderBloc extends Bloc<MealProviderEvent, MealProviderState> {
 
   final GetAllMealProviderUseCase getAllMealProviderUseCase;
 
-  _onGetAllMealProvider(
+  Future<void> _onGetAllMealProvider(
     GetAllMealProviderEvent event,
     Emitter<MealProviderState> emit,
   ) async {
     emit(const MealProviderState.loading());
 
-    final (error, data) = await getAllMealProviderUseCase(NoParam());
-    if (error != null) {
-      emit(const MealProviderState.error());
+    await Future.delayed(const Duration(seconds: 1));
+
+    final (failure, mealProviders) = await getAllMealProviderUseCase(NoParam());
+    if (failure != null) {
+      emit(MealProviderState.error(failure));
       return;
     }
 
-    emit(MealProviderState.loaded(mealProviders: data!));
+    emit(MealProviderState.loaded(mealProviders: mealProviders!));
   }
 }

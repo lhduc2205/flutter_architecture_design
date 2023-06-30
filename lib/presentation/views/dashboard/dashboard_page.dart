@@ -1,16 +1,15 @@
 import 'package:architecture_designed/l10n/l10n.dart';
 import 'package:architecture_designed/presentation/views/dashboard/cubit/dashboard_page_index_cubit.dart';
 import 'package:architecture_designed/presentation/widgets/active_icon_button.dart';
+import 'package:architecture_designed/router/router_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:architecture_designed/presentation/views/home/home_page.dart';
-import 'package:architecture_designed/presentation/views/setting/setting_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key, required this.child}) : super(key: key);
 
-  factory DashboardPage.routeBuilder(_, GoRouterState state, Widget child) {
+  factory DashboardPage.routeBuilder(_, __, Widget child) {
     return DashboardPage(
       key: const Key('dashboard'),
       child: child,
@@ -64,9 +63,9 @@ class _DashboardPageState extends State<DashboardPage> {
   void switchPage(int index) {
     switch (index) {
       case 0:
-        context.go('/home', extra: 'Home screen');
+        context.go(RouterPath.home, extra: 'Home screen');
       case 1:
-        context.go('/setting');
+        context.go(RouterPath.setting);
     }
   }
 }

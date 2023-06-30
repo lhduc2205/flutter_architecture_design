@@ -5,5 +5,11 @@
   "settings": "Cài đặt",
   "languages": "Ngôn ngữ",
   "vietnamese": "Tiếng Việt",
-  "english": "Tiếng Anh"
+  "english": "Tiếng Anh",
+  "batteryStatus": "Trạng thái pin",
+  "status": "Trạng thái",
+  "battery": "Pin",
+  "internalServerError": "Lỗi máy chủ",
+  "cannotConnectTo": "Không thể kết nối tới {destination}",
+  "tryAgain": "Thử lại"
 }
